@@ -9,7 +9,7 @@ use egui::Theme;
 fn main() -> eframe::Result {
     env_logger::init(); // Log to stderr (if you run with `RUST_LOG=debug`).
     let options = eframe::NativeOptions {
-        viewport: egui::ViewportBuilder::default().with_inner_size([500.0, 300.0]),
+        viewport: egui::ViewportBuilder::default().with_inner_size([750.0, 450.0]),
         ..Default::default()
     };
     eframe::run_native(
@@ -29,7 +29,7 @@ struct MyApp {}
 impl eframe::App for MyApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
-            ui.image(egui::include_image!("rat.jpg"));
+            ui.image(egui::include_image!("rat.png"));
         });
     }
 }
@@ -40,6 +40,5 @@ fn setup_custom_style(ctx: &egui::Context) {
 }
 
 fn white_bg(style: &mut Style) {
-    style.visuals.window_fill = Color32::WHITE;
     style.visuals.panel_fill = Color32::WHITE;
 }
