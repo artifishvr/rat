@@ -30,7 +30,7 @@ fn main() {
         |elwt| {
             let window_attributes = Window::default_attributes()
                 .with_title("rat (not a virus)")
-                .with_inner_size(winit::dpi::LogicalSize::new(img_width, img_height))
+                .with_inner_size(winit::dpi::PhysicalSize::new(img_width, img_height))
                 .with_resizable(false)
                 .with_enabled_buttons(WindowButtons::CLOSE);
 
